@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8" />
-		<title>SWE632-Painter</title>
+		<title>Painter</title>
 		<link rel="stylesheet" href="assets/css/index.css" />
 		<link rel="stylesheet" href="assets/css/imageItem.css" />
 		<link rel="stylesheet" href="assets/libs/Semantic-UI-master/dist/semantic.min.css" />
@@ -35,7 +35,7 @@
 		<div id="topMenu" class="ui menu">
 			<div class="header item"><img src="assets/image/logo.png">Painter</div>
 		    <div class="ui dropdown item">
-					<div <input type="button" value="newpage" onclick="javascript: location.reload(true)">
+					<div <input type="button" value="刷新网页" onclick="javascript: location.reload(true)">
 		    	New page
 		    	</div>
 				</div>
