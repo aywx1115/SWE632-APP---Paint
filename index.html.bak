@@ -81,7 +81,8 @@
 						<button class="ui button"><i class="erase icon"></i></button>
 						<button class="ui button"><i class="eyedropper icon"></i></button>
 						<button class="ui button"><i class="icon iconfont">&#xe687;</i></button>
-						<button class="ui button"><i class="zoom icon"></i></button>
+						<button class="ui button"><i class="zoomIn icon"></i></button>
+						<button class="ui button"><i class="zoomOut icon"></i></button>
 					</div>
 				</div>
 			</div>

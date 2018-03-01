@@ -942,6 +942,9 @@ i.icon.block.layout:before {
 i.icon.zoom:before {
   content: "\f00e";
 }
+i.icon.zoomout:before {
+  content: "\f010";
+}
 i.icon.zoom.out:before {
   content: "\f010";
 }
@@ -2587,4 +2590,3 @@ i.icon.bed:before {
 /*******************************
          Site Overrides
 *******************************/
-
