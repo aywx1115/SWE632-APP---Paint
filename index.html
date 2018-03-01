@@ -35,48 +35,57 @@
 		<div id="topMenu" class="ui menu">
 			<div class="header item"><img src="assets/image/logo.png">Painter</div>
 		    <div class="ui dropdown item">
-					<div <input type="button" value="newpage" onclick="javascript: location.reload(true)">
-		    	New page
-		    	</div>
-				</div>
-		    <div class="ui dropdown item">
-		    	Edit
-		    	<div class="menu" style="min-width: 210px;">
-		    		<div class="divider"></div>
-		    		<div class="item">
-		    			<i class="icon iconfont">&#xe60d;</i>
-		    			<span class="text">Tools</span>
-		    			<i class="dropdown icon"></i>
-		    			<div class="menu" style="min-width: 200px;">
-				    		<div class="item">
-				    			<i class="paint brush icon"></i>
-				    			<span class="text">Pen</span>
-				    		</div>
-				    		<div class="item">
-				    			<i class="erase icon"></i>
-				    			<span class="text">Eraser</span>
-				    		</div>
-				    		<div class="item">
-				    			<i class="eyedropper icon"></i>
-				    			<span class="text">Eyedropper</span>
-				    		</div>
-				    		<div class="item">
-				    			<i class="icon iconfont">&#xe687;</i>
-				    			<span class="text">Paint Bucket</span>
-				    		</div>
-				    		<div class="item">
-				    			<i class="zoom icon"></i>
-				    			<span class="text">Magnifying glass</span>
-				    		</div>
-		    			</div>
+					New Page
+					<div class="menu" style="min-width: 210px;">
+		    		<div class="item" input type="button" value="newpage" onclick="javascript: location.reload(true)">
+							<i class="file text icon"></i>
+				    	<span class="text">New page</span>
+							<span class="description">Ctrl+N</span>
 		    		</div>
-		    	</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+		    	Open
+		    	<div class="menu" style="min-width: 210px;">
+		    		<div class="item">
+		    			<i class="folder open outline icon"></i>
+				    	<span class="text">Open photo</span>
+				    	<span class="description">Ctrl+O</span>
+				    </div>
+						<div class="divider"></div>
+						<div class= "text" style="color:#000000;text-align: center">
+							<span class="text ">  This application can only open</span><br>
+							<span class="text ">  ".point" file which is created by</span></br>
+							<span class="text ">  this application </span>
+							<br>
+						</div>
+					</div>
+				</div>
+				<div class="ui dropdown item">
+		    	Save
+		    	<div class="menu" style="min-width: 210px;">
+		    		<div class="item">
+		    			<i class="save icon"></i>
+							<span class="text">Save photo</span>
+				   		<span class="description">Ctrl+S</span>
+		    		</div>
+						<div class="divider"></div>
+						<div class= "text" style="color:#000000;text-align: center">
+							<span class="text ">  This application can only Save</span><br>
+							<span class="text ">  image in ".point" format which</span></br>
+							<span class="text ">  can be opened by this application</span>
+							<br>
+						</div>
+			    </div>
 		    </div>
-		    <div class="ui dropdown item">
-		    	Attribute
-		    	<div class="menu" style="min-width: 200px;">
-
-		    	</div>
+				<div class="ui dropdown item">
+		    	Help
+		    	<div class="menu" style="min-width: 180px;">
+			    	<div class="item">
+		    			<i class="info circle icon"></i>
+		    			<span class="text">GuideBook</span>
+		    		</div>
+	    		</div>
 		    </div>
 		    <div class="right menu">
 		    	<div class="ui dropdown item">
@@ -97,11 +106,12 @@
 			<div id="leftBox">
 				<div id="toolPanel">
 					<div class="ui vertical basic icon buttons">
-						<button class="ui button"><i class="paint brush icon"></i></button>
-						<button class="ui button"><i class="erase icon"></i></button>
-						<button class="ui button"><i class="eyedropper icon"></i></button>
-						<button class="ui button"><i class="icon iconfont">&#xe687;</i></button>
-						<button class="ui button"><i class="zoom icon"></i></button>
+						<button title ="Pen" class="ui button"><i class="write icon"></i></button>
+						<button title ="Eraser" class="ui button"><i class="erase icon"></i></button>
+						<button title ="ColorSucker"class="ui button"><i class="eyedropper icon"></i></button>
+						<button title ="Paint Bucket"class="ui button"><i class="icon iconfont">&#xe687;</i></button>
+						<button title ="ZoomIn" class="ui button"><i class="zoom icon"></i></button>
+						<button title ="ZoomOut" class="ui button"><i class="zoomout icon"></i></button>
 					</div>
 				</div>
 			</div>
@@ -152,6 +162,18 @@
 					</div>
 			</div>
 		</div>
+		<div id="inputWin" class="ui modal">
+			<div class="header"><i class="write icon"></i><label>Title</label></div>
+			<div class="content">
+				<div class="ui fluid right labeled input">
+				  <input type="text" placeholder="PlaceHolder">
+				  <div class="ui basic label">label</div>
+				</div>
+			</div>
+			<div class="actions">
+				<button class="ui primary button">Confirm</button>
+			</div>
+		</div>
 		<div id="materialSelectWin" class="ui modal">
 			<div class="header"><i class="file text icon"></i>Material</div>
 			<div class="content"></div>
@@ -164,6 +186,23 @@
 			<div class="content"></div>
 			<div class="actions">
 				<button class="ui primary button">Choose</button>
+			</div>
+		</div>
+		<div id="settingWin" class="ui modal">
+			<div class="ui labeled icon menu" style="border-bottom-left-radius: 0px;border-bottom-right-radius: 0px;margin: 0px;">
+				<a class="item"><i class="info circle icon"></i>Guide Book</a>
+			</div>
+			<div class="content" style="padding: 20px;border-top-left-radius: 0px;border-top-right-radius: 0px;">
+				<div style="display: none;">
+				</div>
+				<div style="display: none;"></div>
+				<div style="display: none;">
+					<div style="width: 100px;height: 100px;border-radius: 100px;border: solid 1px #E3E3E3;margin: auto;">
+						<img src="assets/image/logo.png" style="max-width: 100px; max-height: 100px;" />
+					</div>
+					<div style="font-size: 20px;color: #333333;text-align: center;">Painter</div>
+					<br /><br /><br />
+				</div>
 			</div>
 		</div>
 
